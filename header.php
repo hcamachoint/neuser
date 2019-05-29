@@ -31,7 +31,7 @@
             <a href="tel:(786)3606481" style="color:#2E64FE"><p>Call Today For </br><small>Free stimated</small></br>(786)360-6481</p></a>
           </div>
         </div>
-        <div class="container d-flex flex-column flex-md-row justify-content-between" align="center">
+        <div class="container d-flex flex-column flex-md-row justify-content-between" align="center" style="margin-top:-20px">
           <?php
             wp_nav_menu([
               'menu'            => 'top',
