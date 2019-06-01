@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts' );
 function customizable_colors( $wp_customize ) {
 
   $wp_customize->add_section('lwp_standard_colors', array(
-		'title' => __('Colores del tema', 'LearningWordPress'),
+		'title' => __('Tema Colores', 'LearningWordPress'),
 		'priority' => 30,
 	));
 
@@ -94,6 +94,39 @@ function customizable_colors( $wp_customize ) {
 		'section' => 'lwp_standard_colors',
 		'settings' => 'bg-fa',
 	) ) );
+
+  //BLOQUE DE TEXTOS
+  $wp_customize->add_panel( 'text_blocks', array(
+      'priority'=>500,
+      'theme_supports'=>'',
+      'title'=> __( 'Tema Textos', 'LearningWordPress' ),
+      'description'=> __( 'Set editable text for certain content.', 'LearningWordPress' ),
+    )
+  );
+
+  $wp_customize->add_section( 'custom_header_text' , array(
+      'title'=> __('Change Header Text','LearningWordPress'),
+      'panel'=>'text_blocks',
+      'priority'=>10
+     )
+  );
+
+  $wp_customize->add_setting( 'header_text_block', array(
+      'default'=> __( '', 'LearningWordPress' ),
+    )
+  );
+
+  $wp_customize->add_control( new WP_Customize_Control(
+      $wp_customize,
+      'custom_header_text',
+      array(
+      'label'=> __( 'Header Text', 'LearningWordPress' ),
+      'section'=>'custom_header_text',
+      'settings'=>'header_text_block',
+      'type'=>'text'
+      )
+    )
+  );
 
 }
 

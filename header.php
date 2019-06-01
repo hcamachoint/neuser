@@ -29,6 +29,11 @@
           </div>
           <div class="col-md-4 d-none d-md-block" style="margin-top:20px;" align="right" >
             <a href="tel:(786)3606481" style="color:#2E64FE"><p>Call Today For </br><small>Free stimated</small></br>(786)360-6481</p></a>
+            <?php if( get_theme_mod( 'header_text_block') != "" ): ?>
+            <p class="footer-text">
+                <?php echo get_theme_mod( 'header_text_block'); ?>
+            </p>
+            <?php endif; ?>
           </div>
         </div>
         <div class="container d-flex flex-column flex-md-row justify-content-between" align="center" style="margin-top:-20px">
