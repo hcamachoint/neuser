@@ -13,11 +13,11 @@
         <div class="container-fluid d-flex flex-column flex-md-row justify-content-between">
           <div class="col-md-4 d-none d-md-block">
             <div style="margin-top:50px">
-              <a href="https://www.facebook.com/mmconstructionllc1/" target="_blank" style="color: #cbc5c1"><span class="fa-stack fa-1x">
+              <a href="https://www.facebook.com/mmconstructionllc1/" target="_blank"><span class="fa-stack fa-1x">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-facebook-f fa-stack-1x fa-inverse" style="color: #000"></i>
               </span></a>
-              <a href="https://www.instagram.com/mmconstructionllc/" target="_blank" style="color: #cbc5c1"><span class="fa-stack fa-1x">
+              <a href="https://www.instagram.com/mmconstructionllc/" target="_blank"><span class="fa-stack fa-1x">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-instagram fa-stack-1x fa-inverse" style="color: #000"></i>
               </span></a>

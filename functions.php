@@ -45,21 +45,54 @@ function customizable_colors( $wp_customize ) {
 		'transport' => 'refresh',
 	));
 
+  $wp_customize->add_setting('bg-nav-a', array(
+		'default' => '#999',
+		'transport' => 'refresh',
+	));
+
+  $wp_customize->add_setting('bg-nav-ah', array(
+		'default' => '#000',
+		'transport' => 'refresh',
+	));
+
 	$wp_customize->add_setting('bg-footer', array(
 		'default' => '#d8d8d8',
 		'transport' => 'refresh',
 	));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_link_color_control', array(
+  $wp_customize->add_setting('bg-fa', array(
+		'default' => '#cbc5c1',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_nav_color_control', array(
 		'label' => __('Navbar Color', 'LearningWordPress'),
 		'section' => 'lwp_standard_colors',
 		'settings' => 'bg-nav',
 	) ) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_btn_color_control', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_tab_color_control', array(
+		'label' => __('Navbar Tab Color', 'LearningWordPress'),
+		'section' => 'lwp_standard_colors',
+		'settings' => 'bg-nav-a',
+	) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_tabhover_color_control', array(
+		'label' => __('Navbar Tab Hover Color', 'LearningWordPress'),
+		'section' => 'lwp_standard_colors',
+		'settings' => 'bg-nav-ah',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_footer_color_control', array(
 		'label' => __('Footer Color', 'LearningWordPress'),
 		'section' => 'lwp_standard_colors',
 		'settings' => 'bg-footer',
+	) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'lwp_bgfa_color_control', array(
+		'label' => __('Font Awesome Stack background Color', 'LearningWordPress'),
+		'section' => 'lwp_standard_colors',
+		'settings' => 'bg-fa',
 	) ) );
 
 }
@@ -73,31 +106,34 @@ function learningWordPress_customize_css() { ?>
 
 		.site-header {
 			background: <?php echo get_theme_mod('bg-nav'); ?>!important;
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+      margin-bottom: 10px!important;
 		}
+
+    .site-header a {
+      color: <?php echo get_theme_mod('bg-nav-a'); ?>;
+      transition: ease-in-out color .15s;
+    }
+    .site-header a:hover {
+      color: <?php echo get_theme_mod('bg-nav-ah'); ?>;
+      text-decoration: none;
+    }
 
     .bg-footer {
 			background: <?php echo get_theme_mod('bg-footer'); ?>!important;
       height: auto!important;
 		}
 
+    .fa-stack{
+      color: <?php echo get_theme_mod('bg-fa'); ?>!important;
+    }
+
     /*
      * Custom translucent site header
      */
 
-    .site-header {
-      background-color: rgba(0, 0, 0, .85);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-      margin-bottom: 10px!important;
-    }
-    .site-header a {
-      color: #999;
-      transition: ease-in-out color .15s;
-    }
-    .site-header a:hover {
-      color: #000;
-      text-decoration: none;
-    }
+
 
     .overflow-hidden { overflow: hidden; }
 
