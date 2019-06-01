@@ -25,7 +25,7 @@
 
           </div>
           <div class="col-md-4" align="center" style="margin-top:20px">
-            <h1 style="color:#fff"><?php bloginfo('name', true, 'center'); ?></h1>
+            <h2 style="color:#fff"><img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" height="130px"/></h2>
           </div>
           <div class="col-md-4 d-none d-md-block" style="margin-top:20px;" align="right" >
             <a href="tel:(786)3606481" style="color:#2E64FE"><p>Call Today For </br><small>Free stimated</small></br>(786)360-6481</p></a>

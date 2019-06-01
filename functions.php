@@ -71,7 +71,7 @@ function learningWordPress_customize_css() { ?>
 
 	<style type="text/css">
 
-		.bg-nav {
+		.site-header {
 			background: <?php echo get_theme_mod('bg-nav'); ?>!important;
 		}
 
@@ -81,27 +81,30 @@ function learningWordPress_customize_css() { ?>
 		}
 
     /*
- * Custom translucent site header
- */
+     * Custom translucent site header
+     */
 
-.site-header {
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
-.site-header a {
-  color: #999;
-  transition: ease-in-out color .15s;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+    .site-header {
+      background-color: rgba(0, 0, 0, .85);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+      margin-bottom: 10px!important;
+    }
+    .site-header a {
+      color: #999;
+      transition: ease-in-out color .15s;
+    }
+    .site-header a:hover {
+      color: #000;
+      text-decoration: none;
+    }
 
+    .overflow-hidden { overflow: hidden; }
 
-
-.overflow-hidden { overflow: hidden; }
-
+    .parallax-container {
+      height: 500px;
+      width: 100%;
+    }
 	</style>
 
 <?php }
