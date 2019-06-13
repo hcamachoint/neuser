@@ -142,7 +142,12 @@ function learningWordPress_customize_css() { ?>
       -webkit-backdrop-filter: saturate(180%) blur(20px);
       backdrop-filter: saturate(180%) blur(20px);
       margin-bottom: 10px!important;
+      -webkit-box-shadow: 0 8px 6px -6px #999;
+      -moz-box-shadow: 0 8px 6px -6px #999;
+      box-shadow: 0 8px 6px -6px #999;
 		}
+
+
 
     .site-header a {
       color: <?php echo get_theme_mod('bg-nav-a'); ?>;
