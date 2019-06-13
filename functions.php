@@ -141,10 +141,10 @@ function learningWordPress_customize_css() { ?>
 			background: <?php echo get_theme_mod('bg-nav'); ?>!important;
       -webkit-backdrop-filter: saturate(180%) blur(20px);
       backdrop-filter: saturate(180%) blur(20px);
-      margin-bottom: 10px!important;
+      margin-bottom: 12px!important;
       -webkit-box-shadow: 0 8px 6px -6px #999;
-      -moz-box-shadow: 0 8px 6px -6px #999;
-      box-shadow: 0 8px 6px -6px #999;
+      -moz-box-shadow: 0px 5px 16px 0px #999;
+      box-shadow: 0px 5px 16px 0px #999;
 		}
 
 
@@ -156,6 +156,10 @@ function learningWordPress_customize_css() { ?>
     .site-header a:hover {
       color: <?php echo get_theme_mod('bg-nav-ah'); ?>;
       text-decoration: none;
+    }
+
+    .site-header li{
+       list-style-type: none;
     }
 
     .bg-footer {
